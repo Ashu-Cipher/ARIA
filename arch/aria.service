@@ -1,0 +1,23 @@
+[Unit]
+Description=Aria AI Assistant — Local Server
+Documentation=https://github.com/aria-assistant
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/share/aria-assistant/aria-serve.sh
+ExecStop=/bin/kill $MAINPID
+Restart=on-failure
+RestartSec=5
+Environment=ARIA_PORT=7676
+
+# Security hardening
+PrivateTmp=true
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/.local/share/aria-assistant
+
+[Install]
+WantedBy=default.target

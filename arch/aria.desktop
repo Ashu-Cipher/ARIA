@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Aria Assistant
+GenericName=AI Personal Assistant
+Comment=Your beautiful, intelligent AI personal assistant — powered by Puter.js
+Exec=aria-launch %u
+Icon=aria-assistant
+Terminal=false
+Type=Application
+Categories=Utility;AI;Chat;Network;
+Keywords=ai;assistant;chat;aria;putery;gemini;
+StartupNotify=true
+StartupWMClass=aria-assistant
+MimeType=x-scheme-handler/aria;
